@@ -9,10 +9,7 @@ const getCartItems = () => {
       dispatch({ type: cartConstants.ADD_TO_CART_REQUEST });
       if (res.status === 200) {
         const { cartItems } = res.data;
-<<<<<<< HEAD
-=======
-        console.log("cartItemssssss");
->>>>>>> 7085862 (Complete category)
+        // console.log("cartItemssssss");
         console.log({ getCartItems: cartItems });
         if (cartItems) {
           dispatch({
@@ -21,13 +18,8 @@ const getCartItems = () => {
           });
         }
       }
-      else if(res.status === 201){
-<<<<<<< HEAD
-        console.log("2000000000000000000000000000001");  
-=======
-        console.log("2000000000000000000000000000001"); 
-        return; 
->>>>>>> 7085862 (Complete category)
+      else if (res.status === 201) {
+        return;
       }
       else {
         const { error } = res.data;
