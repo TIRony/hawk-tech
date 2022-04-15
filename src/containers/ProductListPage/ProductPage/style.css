@@ -1,0 +1,33 @@
+.bannerContent{
+    /* display: block; */
+    margin: 0px auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.bannerImage{
+    width: 100%;
+    /* margin-left: 250px; */
+}
+.cardContent{
+    width: 400px;
+    height: 400px;
+    margin: 0px;
+}
+
+@media only screen and (max-width: 767px) {
+    .bannerContent{
+        /* display: block; */
+        margin: 0px auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .cardContent{
+        width: 300px;
+        height: 300px;
+        margin: 0px;
+    }
+}

@@ -1,0 +1,8 @@
+.firstProductList{
+    display: flex;
+    overflow-x: auto;
+}
+.firstProductList::-webkit-scrollbar{
+    width: 0;
+    height: 5px;
+}

@@ -1,0 +1,119 @@
+.dFlex, 
+.main_content, 
+.main_content .card, 
+.main_content .card .card_header, 
+.btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.main_content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.main_content :link{
+  text-decoration: none;
+}
+  .main_content .card {
+    width: 80%;
+    min-width: 250px;
+    min-height: 420px;
+    border-radius: 30px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    -webkit-transform: scale(0.97);
+            transform: scale(0.97);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    margin-bottom: 50px;
+  }
+  
+  .main_content .card .card_img {
+    margin-top: 0vw;
+  }
+  
+  .main_content .card .card_img img {
+    width: 200px;
+  }
+  
+  .main_content .card .card_header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #fff;
+    margin: 25px 0;
+  }
+  
+  .main_content .card .card_header h2 {
+    font-size: 18px;
+    color: #000000;
+  }
+  
+  .main_content .card .card_header p {
+    font-size: 14px;
+    text-align: center;
+    color: #1d1b1b;
+    margin: 8px 0;
+  }
+  
+  .main_content .card .card_header .price {
+    font-size: 25px;
+    color: #03ac44;
+  }
+  
+  .main_content .card .card_header .price span {
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .main_content .card:hover {
+    background-color: #f7fff7;
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    cursor: pointer;
+  }
+  
+  .main_content .card:hover .btn {
+    background-color: #03ac44;
+    color: #fff;
+  }
+  
+  .btn {
+    width: 130px;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 35px;
+    background-color: #2d343e;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    overflow: hidden;
+  }

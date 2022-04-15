@@ -1,0 +1,97 @@
+.dFlex, .support_info_content, .support_info_content .card, .support_info_content .card .card_header, .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.support_info_content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 0px;
+    padding: 0px;
+    display: flex;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    background: #fff;
+    margin-top: 5px;
+}
+
+.support_info_content .card {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.2rem 0;
+    margin-bottom: 5px;
+    justify-content: space-evenly;
+    -webkit-transform: scale(0.97);
+    transform: scale(0.97);
+}
+
+.support_info_content .card {
+    margin-top: 0vw;
+}
+
+.support_info_content .card img {
+    width: 100px;
+}
+
+.support_info_content .card .card_header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #fff;
+    margin: 2px 0;
+}
+
+.support_info_content .card .card_header h2 {
+    font-size: 18px;
+    color: #000000;
+}
+
+.support_info_content .card .card_header .price {
+    font-size: 20px;
+    color: #03ac44;
+}
+
+.support_info_content .card:hover {
+    background-color: #f7fff7;
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    /* cursor: pointer; */
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .support_info_content .card {
+        gap: 4.5rem;
+        /* justify-content: space-around; */
+    }
+    .support_info_content .card .card_header h2 {
+        font-size: 70%;
+    }
+    .support_info_content .card .card_header .price {
+        font-size: 70%;
+    }
+}

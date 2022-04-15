@@ -1,0 +1,120 @@
+import React, { useEffect } from 'react';
+import './style.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { IoIosArrowDown } from "react-icons/io";
+import { getAllCategory } from '../../actions';
+import { Layout } from 'antd';
+import { Link } from 'react-router-dom';
+const { Content } = Layout;
+
+/**
+* @author
+* @function MenuHeader
+**/
+
+const MenuHeader = (props) => {
+
+  const category = useSelector(state => state.category);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllCategory());
+  }, []);
+
+
+  const renderCategories = (categories) => {
+    let myCategories = [];
+    for (let category of categories) {
+      myCategories.push(
+        <li key={category.name}>
+          {
+            category.parentId ? <a
+              href={`/${category.slug}?cid=${category._id}&type=${category.type}`}>
+              {/* Grand parent */}
+              {category.name}
+            </a> :
+              // parent and child
+              <span>{category.name} <IoIosArrowDown /></span>
+          }
+          {category.children.length > 0 ? (<ul>{renderCategories(category.children)}</ul>) : null}
+        </li>
+      );
+    }
+    return myCategories;
+  }
+  return (
+    <Layout>
+      <Content>
+        <div className="menuHeader">
+          <ul>
+            {category.categories.length > 0 ? renderCategories(category.categories) : null}
+            <Link to={`/AllProducts`} className="product" style={{ color: "#333" }}>
+              <span>Store</span>
+            </Link>
+          </ul>
+        </div>
+      </Content>
+    </Layout>
+  )
+}
+
+export default MenuHeader
+
+
+{/* <a href={`/AllProducts`} className="product" style={{ color: "#333" }}>
+              <span>Product</span>
+            </a> */}
+
+
+const options = (categories) => {
+    console.log("baaaaaaaaaaaaaaaal")
+    console.log(categories)
+    let myCategories = [];
+    for (let category of categories) {
+      console.log("saaaaaaaaaaaaaaaal")
+      console.log(category.name)
+      myCategories.push(
+        {
+          value: category.name,
+          label: category.name,
+          children: options(category.children),
+        }
+      )
+    }
+    return myCategories;
+  }
+
+
+  // const renderCategoriesMenu = (categories, index) => {
+  //   let myCategories = [];
+  //   for (let category of categories) {
+  //     myCategories.push(
+  //       <Menu style={{ width: 256 }} mode="vertical">
+  //         <SubMenu key={category._id} title={category.name}>
+  //           {
+  //             <Menu.ItemGroup>
+  //               {category.parentId ? <Menu.Item key={index}>
+  //                 <a href={`/${category.slug}?cid=${category._id}&type=${category.type}`}>
+  //                   {category.name}
+  //                 </a>
+  //                 {/* <link to= {`/${category.slug}?cid=${category._id}&type=${category.type}`} >{category.name}</link> */}
+  //               </Menu.Item> : Empty}
+  //             </Menu.ItemGroup>
+  //           }
+  //           {category.children.length > 0 ? (<ul>{renderCategoriesMenu(category.children)}</ul>) : null}
+  //         </SubMenu>
+  //       </Menu>
+  //     );
+  //   }
+  //   return myCategories;
+  // }
+
+  {/* <Cascader
+              options={options(category.categories)}
+              // expandTrigger="hover"
+              // displayRender={displayRender}
+              onChange={onChange}
+              // onChange={handleClick(category.categories)}
+            >
+              <a>Change city</a>
+            </Cascader> */}

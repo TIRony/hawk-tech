@@ -1,0 +1,13 @@
+.SmallBannerContent{
+    background: white;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: auto;
+    position:relative;
+    gap: 10px;
+}
+.SmallBannerContent::-webkit-scrollbar{
+    height: 5px;
+}
