@@ -196,8 +196,6 @@ function AllProducts() {
                             <p>{product.description}</p>
                             <h2> {'৳ '}{product.price} &nbsp; <span> {'৳'}{product.price * 1.2}</span> </h2>
                             <h4>Only {product.quantity} in stock !</h4>
-<<<<<<< HEAD
-=======
 
                             <Link
                                 to={`/product/${product._id}/p`}
@@ -207,7 +205,6 @@ function AllProducts() {
                                 >View</a>
                             </Link>
 
->>>>>>> 7085862 (Complete category)
                             <a
                                 className="btn"
                                 onClick={() => {
@@ -267,19 +264,16 @@ function AllProducts() {
                         <Menu.Item key="9">option9</Menu.Item>
                     </SubMenu>
 
-<<<<<<< HEAD
                     <CheckBox
                         list={continents}
                         style={{ paddingBottom: '10px', paddingLeft: '20px' }}
                         handleFilters={filters => handleFilters(filters, "continents")}
                     />
-=======
                     {/* <CheckBox
                         list={continents}
                         style={{ paddingBottom: '10px', paddingLeft: '20px' }}
                         handleFilters={filters => handleFilters(filters, "continents")}
                     /> */}
->>>>>>> 7085862 (Complete category)
 
                     <RadioBox
                         list={price}
