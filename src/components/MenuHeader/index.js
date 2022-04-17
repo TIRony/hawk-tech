@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import './style.css';
 import { useSelector, useDispatch } from 'react-redux';
-import {  ShopTwoTone } from '@ant-design/icons';
+import {  SettingTwoTone, ShopTwoTone } from '@ant-design/icons';
 import { getAllCategory } from '../../actions';
-import { Layout, Menu, Spin } from 'antd';
+import { Layout, Menu, Space } from 'antd';
 import { Link } from 'react-router-dom';
 const { Content } = Layout;
 const { SubMenu } = Menu;
@@ -66,10 +66,16 @@ const MenuHeader = (props) => {
             {/* {category.categories.length > 0 ? renderCategories(category.categories) : null} */}
             {category.categories.length > 0 ? renderCategoriesMenu(category.categories) : null}
             {/* {category.loading && loader()} */}
-            <Link to={`/AllProducts`} className="product" style={{ color: "#333" }}>
-              <ShopTwoTone twoToneColor="#03ac44" style={{ fontSize: '32px' }} />
-              {/* <span> <Space size={"large"}>Store</Space> </span> */}
+
+            <Link to={`/CustomBuild`} className="custom" style={{ color: "#333" }}>
+              <SettingTwoTone twoToneColor="#03ac44" style={{ fontSize: '28px' }} />
+              <span> <Space size={'large'}>Custom Build</Space> </span>
             </Link>
+            <Link to={`/AllProducts`} className="product" style={{ color: "#333" }}>
+              <ShopTwoTone twoToneColor="#03ac44" style={{ fontSize: '28px' }} />
+              <span> <Space size={'large'}>Store</Space> </span>
+            </Link>
+
           </ul>
         </div>
       </Content>

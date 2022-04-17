@@ -11,6 +11,7 @@ import CheckoutPage from "./containers/CheckoutPage";
 import OrderPage from "./containers/OrderPage";
 import OrderDetailsPage from "./containers/OrderDetailsPage";
 import AllProducts from "./containers/AllProducts";
+import CustomBuild from "./containers/CustomBuild";
 
 function App() {
   const dispatch = useDispatch();
@@ -43,11 +44,13 @@ function App() {
           <Route path="/account/orders" component={OrderPage} />
           <Route path="/order_details/:orderId" component={OrderDetailsPage} />
           <Route path="/AllProducts" component={AllProducts} />
+          <Route path="/CustomBuild" component={CustomBuild} />
           <Route
             path="/:productSlug/:productId/p"
             component={ProductDetailsPage}
           />
           <Route path="/:slug" component={ProductListPage} />
+          <Route path="/CustomBuild" component={CustomBuild} />
         </Switch>
       </Router>
     </div>

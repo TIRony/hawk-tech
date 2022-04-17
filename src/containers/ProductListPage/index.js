@@ -15,39 +15,33 @@ import "./style.css";
  **/
 
 const ProductListPage = (props) => {
-  // const product = useSelector(state => state.product);
   const renderProduct = () => {
     const params = getParams(props.location.search);
     let content = null;
-    // const part = useSelector(state => state.part);
-    const renderProduct = () => {
-      const params = getParams(props.location.search);
-      let content = null;
-      // console.log(part);
-      switch (params.type) {
-        case "store":
-          content = <ProductStore {...props} />;
-          break;
-        case "page":
-          content = <ProductPage {...props} />;
-          break;
-        default:
-          content = <ProductList {...props} />;
-      }
+    // console.log(part);
+    switch (params.type) {
+      case "store":
+        content = <ProductStore {...props} />;
+        break;
+      case "page":
+        content = <ProductPage {...props} />;
+        break;
+      default:
+        content = <ProductList {...props} />;
+    }
 
-      return content;
-    };
-
-    return (
-      <Layout>
-        {/* {product.loading ? loaderPage()
+    return content;
+  };
+  return (
+    <Layout>
+      {/* {product.loading ? loaderPage()
         :
         renderProduct()
       } */}
-        {renderProduct()}
-        <MainFooter />
-      </Layout>
-    );
-  };
+      {renderProduct()}
+      <MainFooter />
+    </Layout>
+  );
 }
+
 export default ProductListPage;

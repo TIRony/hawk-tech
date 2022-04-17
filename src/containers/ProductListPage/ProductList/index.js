@@ -43,7 +43,7 @@ const ProductList = (props) => {
                       <h2>{product.name}</h2>
                       <p className="price">৳ {product.price}</p>
                       <p>{product.description}</p>
-                      <div className="btn">Add to cart</div>
+                      {/* <div className="btn">Add to cart</div> */}
                       <div className="btn">View</div>
                     </div>
                   </div>

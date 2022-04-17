@@ -77,17 +77,39 @@
 }
 .product{
     display: block;
-    line-height: 65px;
+    /* line-height: 65px; */
     cursor: pointer;
     padding: 0 20px;
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
     font-weight: bold;
     color: #333;
-    /* margin-right: 48px;     */
-    margin-inline-start: inherit;
+    /* padding-bottom: 24px;     */
+    margin-inline-start: initial;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2px;
 }
 .product :hover{
+    color: #03ac44;   
+}
+
+.custom{
+    display: block;
+    /* line-height: 65px; */
+    cursor: pointer;
+    padding: 0 20px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    /* padding-bottom: 24px;     */
+    margin-inline-start: inherit;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2px;
+}
+.custom :hover{
     color: #03ac44;   
 }
 
