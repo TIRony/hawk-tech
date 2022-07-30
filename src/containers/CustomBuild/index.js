@@ -29,7 +29,7 @@ const CustomBuild = () => {
                     <div>
                         {/* {render()} */}
                         {/* {product.loading ? loaderPage() : render()} */}
-                        <h1>hell</h1>
+                        <h1>Under Construction</h1>
                     </div>
                     {/* </Row> */}
                 </Content>
