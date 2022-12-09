@@ -1,5 +1,5 @@
-const baseUrl = "https://hawk-tech-server.herokuapp.com";
-// const baseUrl = "http://localhost:2000";
+// const baseUrl = "https://hawk-tech-server.herokuapp.com";
+const baseUrl = "http://localhost:2000";
 export const api = `${baseUrl}/api`;
 
 // for normal store
