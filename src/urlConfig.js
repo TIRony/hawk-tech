@@ -1,6 +1,6 @@
 // const baseUrl = "https://hawk-tech-server.herokuapp.com";
 // const baseUrl = "http://localhost:2000";
-// const baseUrl = "https://ill-blue-panda-vest.cyclic.app";
+const baseUrl = "https://ill-blue-panda-vest.cyclic.app";
 export const api = `${baseUrl}/api`;
 
 // for normal store
